@@ -10,7 +10,7 @@
         "https://laurenziello.github.io/favicon.ico",
         "https://laurenziello.github.io/index.html",
         "https://laurenziello.github.io/inline.318b50c57b4eba3d437b.bundle.js",
-        "https://laurenziello.github.io/main.f1900cb7ec38736fede4.bundle.js",
+        "https://laurenziello.github.io/main.7b061ba846e381b5d241.bundle.js",
         "https://laurenziello.github.io/polyfills.77d59861e39435768676.bundle.js",
         "https://laurenziello.github.io/styles.0744b9f6769c326ccd7f.bundle.css"
       ],
@@ -20,17 +20,20 @@
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
-      "urls": [],
+      "urls": [
+        "https://laurenziello.github.io/assets/main-page-logo-small-hat.png"
+      ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
     "https://laurenziello.github.io/inline.318b50c57b4eba3d437b.bundle.js": "998c6060446975e566fd17509558ddc68d72eec3",
-    "https://laurenziello.github.io/main.f1900cb7ec38736fede4.bundle.js": "337c258b80c2737c9196363981ae00284c35a2d5",
+    "https://laurenziello.github.io/assets/main-page-logo-small-hat.png": "a69b701ae8f1c76a12648bf5f4608e2baece1169",
+    "https://laurenziello.github.io/main.7b061ba846e381b5d241.bundle.js": "2225d416325cec9a555c94e6c12f8e438a6d4b91",
     "https://laurenziello.github.io/polyfills.77d59861e39435768676.bundle.js": "beb3f7129447fb464639e25447ceb200fa2ba87e",
     "https://laurenziello.github.io/styles.0744b9f6769c326ccd7f.bundle.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "https://laurenziello.github.io/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "https://laurenziello.github.io/index.html": "854964650fb57b0b06b6ece49313ce814462da01"
+    "https://laurenziello.github.io/index.html": "fad6321a35aea71fd633dbe129c4115ed264ca17"
   }
 }
