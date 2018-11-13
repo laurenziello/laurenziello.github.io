@@ -368,11 +368,9 @@ MIT
 
 @angular/material/snack-bar
 
-@angular/material/icon
-
-@angular/material/card
-
 @angular/material/toolbar
+
+@angular/material/icon
 
 @angular/material/grid-list
 
@@ -385,8 +383,6 @@ MIT
 @angular/material/list
 
 @angular/material/expansion
-
-@angular/material/tabs
 
 zone.js
 MIT
