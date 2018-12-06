@@ -1,0 +1,103 @@
+{
+  "configVersion": 1,
+  "index": "https://laurenziello.github.io/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://laurenziello.github.io/favicon.ico",
+        "https://laurenziello.github.io/index.html",
+        "https://laurenziello.github.io/main.9e6c0572c871b461b139.js",
+        "https://laurenziello.github.io/polyfills.c6871e56cb80756a5498.js",
+        "https://laurenziello.github.io/runtime.ec2944dd8b20ec099bf3.js",
+        "https://laurenziello.github.io/scripts.a00c037d89f30e04f3e1.js",
+        "https://laurenziello.github.io/styles.e4cadab2ad3643348ca8.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://laurenziello.github.io/assets/20181125qmt010601.png",
+        "https://laurenziello.github.io/assets/MST.png",
+        "https://laurenziello.github.io/assets/SourceBackground.jpg",
+        "https://laurenziello.github.io/assets/backgroundlogin.jpg",
+        "https://laurenziello.github.io/assets/horse.svg",
+        "https://laurenziello.github.io/assets/icons/icon-128x128.png",
+        "https://laurenziello.github.io/assets/icons/icon-144x144.png",
+        "https://laurenziello.github.io/assets/icons/icon-152x152.png",
+        "https://laurenziello.github.io/assets/icons/icon-192x192.png",
+        "https://laurenziello.github.io/assets/icons/icon-384x384.png",
+        "https://laurenziello.github.io/assets/icons/icon-512x512.png",
+        "https://laurenziello.github.io/assets/icons/icon-72x72.png",
+        "https://laurenziello.github.io/assets/icons/icon-96x96.png",
+        "https://laurenziello.github.io/assets/video_img.png",
+        "https://laurenziello.github.io/assets/weathericons/css/weather-icons-wind.css",
+        "https://laurenziello.github.io/assets/weathericons/css/weather-icons-wind.min.css",
+        "https://laurenziello.github.io/assets/weathericons/css/weather-icons.css",
+        "https://laurenziello.github.io/assets/weathericons/css/weather-icons.min.css",
+        "https://laurenziello.github.io/assets/weathericons/font/weathericons-regular-webfont.eot",
+        "https://laurenziello.github.io/assets/weathericons/font/weathericons-regular-webfont.svg",
+        "https://laurenziello.github.io/assets/weathericons/font/weathericons-regular-webfont.ttf",
+        "https://laurenziello.github.io/assets/weathericons/font/weathericons-regular-webfont.woff",
+        "https://laurenziello.github.io/assets/weathericons/font/weathericons-regular-webfont.woff2"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://laurenziello.github.io/assets/20181125qmt010601.png": "789d452f5d4f5ae351604df48368fe822e25ea35",
+    "https://laurenziello.github.io/assets/MST.png": "e0df00a2d29b687c8458c14070ce0e438a4c5891",
+    "https://laurenziello.github.io/assets/SourceBackground.jpg": "5d50048e3bf42362a429704e6d76e88b338c54fa",
+    "https://laurenziello.github.io/assets/backgroundlogin.jpg": "e9c7efc2d24ea9b5b483cc06748dfc8e2b323471",
+    "https://laurenziello.github.io/assets/horse.svg": "678656cd53b0c013987ee9d84c4b1a0bb90956dc",
+    "https://laurenziello.github.io/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://laurenziello.github.io/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://laurenziello.github.io/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://laurenziello.github.io/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://laurenziello.github.io/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://laurenziello.github.io/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://laurenziello.github.io/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://laurenziello.github.io/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://laurenziello.github.io/assets/video_img.png": "5fd93c6c8f1ad4c94f5917bd9e8899d7fd40273c",
+    "https://laurenziello.github.io/assets/weathericons/css/weather-icons-wind.css": "54973b238ec82190b7e82028948dd13ba3349851",
+    "https://laurenziello.github.io/assets/weathericons/css/weather-icons-wind.min.css": "8ba6bb9fd5e165766b9860897f43e91875b30b14",
+    "https://laurenziello.github.io/assets/weathericons/css/weather-icons.css": "16579e1cd88dcb96816982226a372c35ff0c6cce",
+    "https://laurenziello.github.io/assets/weathericons/css/weather-icons.min.css": "5074c62af1eeee7856601dad03b91900c8cf5244",
+    "https://laurenziello.github.io/assets/weathericons/font/weathericons-regular-webfont.eot": "5d58a11d6de39f76e43a93fb1ef70e7bd78032a2",
+    "https://laurenziello.github.io/assets/weathericons/font/weathericons-regular-webfont.svg": "c3b440c8a72eb2816bc6c52fb3d6bbf878b6fe23",
+    "https://laurenziello.github.io/assets/weathericons/font/weathericons-regular-webfont.ttf": "9916e3dbc3990e3073cf5a2cb4c2e958273b7532",
+    "https://laurenziello.github.io/assets/weathericons/font/weathericons-regular-webfont.woff": "5b909f99b700b5289e9af6f750405152b06e32f2",
+    "https://laurenziello.github.io/assets/weathericons/font/weathericons-regular-webfont.woff2": "718dd740e8340888352129e592fed085409e891e",
+    "https://laurenziello.github.io/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "https://laurenziello.github.io/index.html": "5d2fc6818d54cdeb0942a9fb296d8fcf3a7f462d",
+    "https://laurenziello.github.io/main.9e6c0572c871b461b139.js": "6a977c4d5c26a231af1b71987310828b834324b6",
+    "https://laurenziello.github.io/polyfills.c6871e56cb80756a5498.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
+    "https://laurenziello.github.io/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "https://laurenziello.github.io/scripts.a00c037d89f30e04f3e1.js": "c793db398c059280d65e58d11d9b7cdb2af886b7",
+    "https://laurenziello.github.io/styles.e4cadab2ad3643348ca8.css": "f72186d8a9a01e1721123ea561ccf0ce81adf867"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
