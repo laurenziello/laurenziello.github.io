@@ -533,30 +533,30 @@ MIT
 @angular/router
 MIT
 
-@angular/material/icon
+@angular/material/bottom-sheet
 
-@angular/material/core
-
-@angular/material/button
-
-@angular/material/form-field
+@angular/material/dialog
 
 @angular/forms
 MIT
 
-@angular/material/select
-
-@angular/material/progress-bar
-
-@angular/material/bottom-sheet
-
-@angular/material/dialog
+@angular/material/button
 
 @angular/material/datepicker
 
 @angular/material/tooltip
 
 @angular/material/snack-bar
+
+@angular/material/icon
+
+@angular/material/core
+
+@angular/material/form-field
+
+@angular/material/select
+
+@angular/material/progress-bar
 
 zone.js
 MIT
