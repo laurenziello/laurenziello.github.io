@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MST Channel</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+            background-image: url(background.jpg);
+            background-size: cover;
+            margin: 0;
+            height: 100%;
+            background-color:black; 
+            padding:20px;
+        }
+
+        .button {
+            background-color: #4d7cc3;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .text_right {
+            float: right;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            font: 400 16px system-ui;
+        }
+
+        .img-logo {
+            height: 62px;
+            margin-bottom: -25px
+        }
+
+        @media (max-width: 991px) {
+            body {
+                padding: 0px;
+            }
+
+            .button {
+            padding: 8px 10px;
+
+            font-size: 14px;
+            margin: 2px 1px;
+            }
+
+            .img-logo {
+                height: 40px;
+                margin-bottom: -15px
+            }
+
+            .text_right {
+    padding: 6px;
+    margin: 0px;
+    font:  13px;
+}
+}
+    </style>
+</head>
+<body>
+  <script src="mstchannel.js"></script>
+  <div style="margin-bottom: 10px"><img src="MSTLOGO.svg" class="img-logo">
+    <button class="button" onclick='GetHorses({
+        cID: "2f1abd87-5863-4bca-bea8-155e4ca42741",
+        sID: "ffffffff-ffff-ffff-ffff-ffffffffffff",
+        OnCompleteBet: "",
+        TrackGA: "",
+        urlimagehome: "",
+        urlimagelinkhome: "",
+        urlimagecart: "",
+        urlimagelinkcart: ""
+    })'>Horses</button>
+    <button class="button" onclick='GetHorsesBetsList({
+                cID: "2f1abd87-5863-4bca-bea8-155e4ca42741",
+                sID: "ffffffff-ffff-ffff-ffff-ffffffffffff"})'>Bets
+      List</button>
+    <span class="text_right"> Integration Demo Layout | STAGING</span>
+  </div>
+  <div id="HorsesContent"></div>
+
+  <script type="text/javascript">
+    GetHorses({
+      cID: "2f1abd87-5863-4bca-bea8-155e4ca42741",
+      sID: "ffffffff-ffff-ffff-ffff-ffffffffffff",
+      OnCompleteBet: "",
+      TrackGA: "",
+      urlimagehome: "",
+      urlimagelinkhome: "",
+      urlimagecart: "",
+      urlimagelinkcart: ""
+    });
+
+  </script>
+</body>
+
+</html>
