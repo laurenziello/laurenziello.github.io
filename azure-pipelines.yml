@@ -3,10 +3,10 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-
 trigger:
-- master
-
+  tags:
+    include:
+    - v*
 
 # Note: github_pat should be configured as an environment variable in devops
 #   -> create github pat here: https://github.com/settings/tokens
