@@ -21,7 +21,7 @@
     </style>
 </head>
 
-<body>
+<body onload="getConnection()">
 
     <div id="div1"></div>
 
@@ -59,7 +59,7 @@
 
 
 
-        function getConnectionInfo() {
+        function getConnection() {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                 console.log(this);
