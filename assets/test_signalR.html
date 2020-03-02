@@ -22,32 +22,14 @@
 </head>
 
 <body>
-    <p>&nbsp;</p>
-    <div id="app" class="container">
 
-
-        <div>
-            <transition-group name="slide-fade" tag="div">
-                <div class="row">
-                    <div class="col-sm">
-
-                        <div id="div1"></div>
-                    </div>
-                </div>
-        </div>
-        </transition-group>
-    </div>
+    <div id="div1"></div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@aspnet/signalr@1.1.4/dist/browser/signalr.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.min.js"></script>
 
     <script>
-
-
-
-
-
 
         getConnectionInfo().then(info => {
             // make compatible with old and new SignalRConnectionInfo
