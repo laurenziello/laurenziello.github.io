@@ -64,7 +64,7 @@
                 .configureLogging(signalR.LogLevel.Information)
                 .build();
 
-            connection.on('notify', addElement(newMessage));
+            connection.on('notify', newMessage);
             connection.onclose(() => console.log('disconnected'));
 
             console.log('connecting...');
@@ -82,11 +82,11 @@
         }
 
 
-        function addElement(newMessage) {
+        function newMessage(message) {
             // crea un nuovo elemento div
             var newDiv = document.createElement("div");
             // ed assegnargli un contenuto
-            var newContent = document.createTextNode(newMessage);
+            var newContent = document.createTextNode(message);
             // aggiungi il nodo di testo al div appena creato
             newDiv.appendChild(newContent);
 
