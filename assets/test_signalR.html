@@ -2,40 +2,27 @@
 
 <head>
     <title>Serverless Chat</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
     <script>
         window.apiBaseUrl = 'https://fun-mst-notifiable.azurewebsites.net';
     </script>
-    <style>
-        .slide-fade-enter-active,
-        .slide-fade-leave-active {
-            transition: all 1s ease;
-        }
-
-        .slide-fade-enter,
-        .slide-fade-leave-to {
-            height: 0px;
-            overflow-y: hidden;
-            opacity: 0;
-        }
-    </style>
-</head>
-
-<body onload="getConnection()">
-
-    <div id="div1"></div>
-
-
     <script src="https://cdn.jsdelivr.net/npm/@aspnet/signalr@1.1.4/dist/browser/signalr.js"></script>
-
-
     <script>
+        function getConnection() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myResponse = JSON.parse(this.responseText);
+                    getConnectionSignalR(myResponse);
+                }
+            };
+            xhttp.open("GET", `${apiBaseUrl}/api/negotiate`, true);
+            xhttp.send();
+        }
 
-        function getConnectionInfo(info) {
+        function getConnectionSignalR(info) {
             // make compatible with old and new SignalRConnectionInfo
             info.accessToken = info.accessToken || info.accessKey;
             info.url = info.url || info.endpoint;
-
 
             const options = {
                 accessTokenFactory: () => info.accessToken
@@ -47,6 +34,7 @@
                 .build();
 
             connection.on('notify', newMessage);
+
             connection.onclose(() => console.log('disconnected'));
 
             console.log('connecting...');
@@ -57,36 +45,18 @@
         };
 
 
-
-
-        function getConnection() {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                console.log(this);
-                if (this.readyState == 4 && this.status == 200) {
-                    // Typical action to be performed when the document is ready:
-                    var myResponse = JSON.parse(this.responseText);
-                    getConnectionInfo(myResponse);
-                }
-            };
-            xhttp.open("GET", `${apiBaseUrl}/api/negotiate`, true);
-            xhttp.send();
-        }
-
         function newMessage(message) {
-            // crea un nuovo elemento div
             var newDiv = document.createElement("div");
-            // ed assegnargli un contenuto
             var newContent = document.createTextNode(message);
-            // aggiungi il nodo di testo al div appena creato
             newDiv.appendChild(newContent);
-
-            // aggiungi l'elemento appena creato e il suo contenuto nel DOM
             var currentDiv = document.getElementById("div1");
             document.body.insertBefore(newDiv, currentDiv);
         }
-
     </script>
+</head>
+
+<body onload="getConnection()">
+    <div id="div1"></div>
 </body>
 
 </html>
