@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Kubernetes · GitBook</title>
+        <title>Trick · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -69,10 +69,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../git/git.html" />
     
-    
-    <link rel="prev" href="../docker/dockerangular.html" />
+    <link rel="prev" href="git.html" />
     
 
     </head>
@@ -639,9 +637,9 @@
         
         
     
-        <li class="chapter active" data-level="7.1" data-path="kubernetes.html">
+        <li class="chapter " data-level="7.1" data-path="../kubernetes/kubernetes.html">
             
-                <a href="kubernetes.html">
+                <a href="../kubernetes/kubernetes.html">
             
                     
                     Kubernetes
@@ -659,9 +657,9 @@
         
         
     
-        <li class="chapter " data-level="8.1" data-path="../git/git.html">
+        <li class="chapter " data-level="8.1" data-path="git.html">
             
-                <a href="../git/git.html#configurazione-globale-di-git">
+                <a href="git.html#configurazione-globale-di-git">
             
                     
                     Global Config
@@ -672,9 +670,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.2" data-path="../git/git.html">
+        <li class="chapter " data-level="8.2" data-path="git.html">
             
-                <a href="../git/git.html#generazione-delle-chiavi-ssh">
+                <a href="git.html#generazione-delle-chiavi-ssh">
             
                     
                     Connect with ssh key
@@ -685,9 +683,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.3" data-path="../git/git.html">
+        <li class="chapter " data-level="8.3" data-path="git.html">
             
-                <a href="../git/git.html#git-flow">
+                <a href="git.html#git-flow">
             
                     
                     Git Flow
@@ -699,9 +697,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="8.3.1" data-path="../git/git.html">
+        <li class="chapter " data-level="8.3.1" data-path="git.html">
             
-                <a href="../git/git.html#main-branches">
+                <a href="git.html#main-branches">
             
                     
                     Main branches
@@ -712,9 +710,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.3.2" data-path="../git/git.html">
+        <li class="chapter " data-level="8.3.2" data-path="git.html">
             
-                <a href="../git/git.html#feature-branch">
+                <a href="git.html#feature-branch">
             
                     
                     Feature
@@ -725,9 +723,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.3.3" data-path="../git/git.html">
+        <li class="chapter " data-level="8.3.3" data-path="git.html">
             
-                <a href="../git/git.html#release-branch">
+                <a href="git.html#release-branch">
             
                     
                     Release
@@ -738,9 +736,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.3.4" data-path="../git/git.html">
+        <li class="chapter " data-level="8.3.4" data-path="git.html">
             
-                <a href="../git/git.html#hotfix-branch">
+                <a href="git.html#hotfix-branch">
             
                     
                     Hotfix
@@ -751,9 +749,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.3.5" data-path="../git/git.html">
+        <li class="chapter " data-level="8.3.5" data-path="git.html">
             
-                <a href="../git/git.html#versionamento-semantico">
+                <a href="git.html#versionamento-semantico">
             
                     
                     Versionamento
@@ -769,9 +767,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.4" data-path="../git/trick.html">
+        <li class="chapter active" data-level="8.4" data-path="trick.html">
             
-                <a href="../git/trick.html">
+                <a href="trick.html">
             
                     
                     Trick
@@ -812,7 +810,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Kubernetes</a>
+        <a href=".." >Trick</a>
     </h1>
 </div>
 
@@ -827,38 +825,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="kubernetes">Kubernetes</h1>
-<p>Procedure per creare un cluster kubernetes su azure</p>
-<p>Dopo aver creato un AKS cluster dal portale azure</p>
-<pre><code>az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
-</code></pre><pre><code>kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
-</code></pre><pre><code>az aks browse --resource-group myResourceGroup --name myAKSCluster
-</code></pre><pre><code>helm install nginx-ingress stable/nginx-ingress --namespace default
-</code></pre><p>create pod, creare service</p>
-<pre><code>apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
-kind: Deployment
-metadata:
-  name: nginx-deployment
-spec:
-  selector:
-    matchLabels:
-      app: nginx
-  replicas: 2 # tells deployment to run 2 pods matching the template
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:1.7.9
-        ports:
-        - containerPort: 80
-</code></pre><p>apiVersion - Which version of the Kubernetes API you&#x2019;re using to create this object
-kind - What kind of object you want to create
-metadata - Data that helps uniquely identify the object, including a name string, UID, and optional namespace
-spec - What state you desire for the object</p>
+                                <h1 id="to-run-pipeline-hosted-in-another-git-server">To run pipeline hosted in another git server</h1>
+<pre><code>git remote -v
+# View existing remotes
+# origin  https://github.com/user/repo.git (fetch)
+# origin  https://github.com/user/repo.git (push)
 
+git remote set-url origin https://github.com/user/repo2.git
+# Change the &apos;origin&apos; remote&apos;s URL
+
+git remote -v
+# Verify new remote URL
+# origin  https://github.com/user/repo2.git (fetch)
+# origin  https://github.com/user/repo2.git (push)
+
+https for https
+git@ for ssh
+</code></pre>
                                 
                                 </section>
                             
@@ -885,14 +868,10 @@ spec - What state you desire for the object</p>
 
             
                 
-                <a href="../docker/dockerangular.html" class="navigation navigation-prev " aria-label="Previous page: Docker Angular">
+                <a href="git.html#versionamento-semantico" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Versionamento">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../git/git.html#configurazione-globale-di-git" class="navigation navigation-next " aria-label="Next page: Global Config">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -901,7 +880,7 @@ spec - What state you desire for the object</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Kubernetes","level":"7.1","depth":1,"next":{"title":"Global Config","level":"8.1","depth":1,"anchor":"#configurazione-globale-di-git","path":"git/git.md","ref":"git/git.md#configurazione-globale-di-git","articles":[]},"previous":{"title":"Docker Angular","level":"6.1","depth":1,"path":"docker/dockerangular.md","ref":"docker/dockerangular.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","flexible-alerts","bootstrap-grid"],"pluginsConfig":{"bootstrap-grid":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"kubernetes/kubernetes.md","mtime":"2020-04-28T11:00:06.737Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-28T11:00:50.783Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Trick","level":"8.4","depth":1,"previous":{"title":"Versionamento","level":"8.3.5","depth":2,"anchor":"#versionamento-semantico","path":"git/git.md","ref":"git/git.md#versionamento-semantico","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","flexible-alerts","bootstrap-grid"],"pluginsConfig":{"bootstrap-grid":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/trick.md","mtime":"2020-04-28T11:00:06.717Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-28T11:00:50.783Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
